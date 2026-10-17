@@ -28,3 +28,5 @@ created. LMDE compatibility depends on its actual Debian base and separate tests
 Maintainer: bb8TheRobot <bb8therobot85@gmail.com>. Packaging: 0BSD.
 Original source license texts are retained in the copyright files. The upstream
 attribution audit and packaging-policy review remain release prerequisites.
+
+License scope and the retained upstream notices are described in [LICENSES.md](LICENSES.md).
