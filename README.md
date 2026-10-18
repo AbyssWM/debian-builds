@@ -42,7 +42,7 @@ Then pick **Abyssland** in your display manager, or run `start-abyssland` from a
 | Release | Status |
 |---|---|
 | **Debian forky (testing)** | ✅ 17 / 17 build and install |
-| Debian 13 trixie | ⚠️ 16 / 17 — `abyssland` needs newer xkbcommon (≥ 1.11), wayland-protocols (≥ 1.49), libinput (≥ 1.29) |
+| Debian 13 trixie | ❌ the forky packages do not install: they need libstdc++6 ≥ 16, glibc ≥ 2.43 and newer libinput, xkbcommon, Qt and abseil. Rebuilt on trixie, 16 / 17 work; `abyssland` itself needs newer xkbcommon (≥ 1.11), wayland-protocols (≥ 1.49), libinput (≥ 1.29) |
 | LMDE | follows its Debian base — LMDE 7 (trixie) has the same limits |
 
 ## 🔨 Build it yourself
