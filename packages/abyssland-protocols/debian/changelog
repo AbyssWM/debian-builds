@@ -1,4 +1,4 @@
-abyssland-protocols (0.7.0+git20261017.23246e7-1) UNRELEASED; urgency=medium
+abyssland-protocols (0.7.0+git20261017.23246e7-1) forky; urgency=medium
 
   * Package the explicitly pinned experimental Abyss snapshot.
 

@@ -1,4 +1,4 @@
-abyssutils (0.14.2+git20261017.b423270-1) UNRELEASED; urgency=medium
+abyssutils (0.14.2+git20261017.b423270-1) forky; urgency=medium
 
   * Package the explicitly pinned experimental Abyss snapshot.
 

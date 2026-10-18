@@ -1,8 +1,8 @@
 # Abyss Debian builds
 
 Experimental Debian source-package definitions for all 17 Abyss repositories.
-Native sbuild/dpkg-buildpackage builds, lintian checks and installation tests are
-**not yet validated**. This repository is not part of Debian's official archive.
+Native dpkg-buildpackage builds are validated (see below); lintian checks and
+runtime tests are **not yet validated**. This repository is not part of Debian's official archive.
 
 `packages/NAME/debian/` contains control files, rules, source format and packaging
 patches. Shared libraries use ABI-named binary packages and separate development
@@ -24,6 +24,19 @@ the assembly helper alone does not produce a validated .deb or signed upload.
 
 No APT repository, signing key, Debian account or archive submission has been
 created. LMDE compatibility depends on its actual Debian base and separate tests.
+
+## Verified native builds (2026-10-18)
+
+Built with `dpkg-buildpackage -b` in private official Debian rootfs images
+(unshare user namespace, -j2). Target series in the changelogs: `forky` (testing).
+
+| Release | Result |
+|---|---|
+| Debian 13 trixie | 16 of 17 packages build. **abyssland does not build**: trixie ships xkbcommon 1.7 (needs >= 1.11), wayland-protocols 1.44 (needs >= 1.49), libinput 1.28 (needs >= 1.29). Backports do not cover libinput. |
+| Debian forky (testing) | 17 of 17 build and install in dependency order. |
+
+Fixes found by the native builds: abyssland needs `glslang-tools` (the glslang
+CMake config references /usr/bin/glslang) and `libeis-dev` (separate package).
 
 Maintainer: bb8TheRobot <bb8therobot85@gmail.com>. Packaging: 0BSD.
 Original source license texts are retained in the copyright files. The upstream
